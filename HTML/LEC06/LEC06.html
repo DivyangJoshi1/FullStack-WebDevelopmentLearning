@@ -1,0 +1,75 @@
+<!--All About Forms and Input Tags-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>This is HTML forms tutorial</h2>
+    <form action="backend.php">
+        <div>
+            <label for="name">Name : </label> 
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role : <input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email : <input type="email" name="myEmail">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date" name="myDate" id="">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        <div>
+            <label for="Eligibility">Are you eligible ?</label>
+            <input type="checkbox" name="yourEligibility" id="Eligibility">
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender"> 
+                    Female <input type="radio" name="myGender"> 
+                    Other <input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            Write about yourself<br>
+            <textarea name="myTextarea" cols="40" rows="10">Write your text here</textarea>
+        </div>
+
+        <br>
+        <div>
+           <label for="car">Car : </label>
+           <select name="myCar" id="car">
+            <option value="Ind">Indica</option>
+            <option value="Kwid" selected>Kwid</option>
+           </select>
+        </div>
+
+        <br>
+        <div>
+            Hobies: Academics <input type="checkbox" name="myHobies1"> 
+            Sports <input type="checkbox" name="myHobies1"> 
+            Arts <input type="checkbox" name="myHobies1">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="SubmitNow">
+        </div>
+        <br>
+        <div>
+            <input type="reset" value="ResetNow">
+        </div>
+        
+    </form>
+</body>
+</html>

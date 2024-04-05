@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Entities</title>
+</head>
+<body>
+    <div class="container">
+        <p>This is a paragraph
+        </p>
+    </div>
+    <div class="container">
+        <p>This is a another           paragraph</p>
+    </div>
+
+    <!--
+    In HTML, all consecutive spaces within content are considered as a single space. 
+    If multiple spaces are desired, HTML entities need to be used to represent them accurately.-->
+
+    <div class="container">
+        <p>This is a another &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;paragraph.</p>
+        <!--"if we want to write <p> Paragraph is written like this <p>"
+        here <p> is reserved keyword in html so we have to use &lt;p&gt; --=> it is html entities.
+
+        we can use html entities to write reserved keyword as a content  of an element.
+        we can also use html entities to write characters that are not present in keyboard -->
+        <p>Paragraph is written like this &lt;p&gt;</p>
+        <p>Pound is written like this &pound;</p>
+        <p>CopyRight is written like this &copy;</p>        
+        <p>celsius is written like this &#8451;</p>     
+        <p>Emoji is written like this &#9757;</p>   
+        <p>Black Heart is written like this &#10084;</p>
+        <p>Empty character is written like this &#8203;</p> <!--We can copy this empty character and also send this as a empty msg-->
+
+
+
+        <!--search html entities in browser for more reference
+        https://www.toptal.com/designers/htmlarrows/symbols/-->
+    </div>
+
+</body>
+</html>
