@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <!--what is CSS Selectors ? 
+    CSS selectors allow us to choose specific elements and apply styles to them.
+    like Element with an id , element with a class, element by it's time etc-->
+
+    <style>
+        /* Element Selector : An element selector picks out specific parts of a webpage so you can change how they look or behave.*/
+
+        /* div{
+            background-color: red;
+        } */
+
+        /* Class Selector : A class selector in web development lets you style or work with several elements that share the same class name on a webpage.*/
+
+        .red{
+            background-color: red;
+        }
+
+        /* ID Selector : An ID selector in web development targets and styles a single HTML element with a unique ID attribute using CSS*/
+
+        #id{
+            background-color: aqua;
+        }
+
+        /* Child Selector : A child selector in web development targets elements that are direct children of another element, allowing for specific styling or manipulation using CSS*/
+
+        div > p{
+            columns: blue;
+            background-color: brown;
+        }
+
+        /* Descendant Selector : A descendant selector in web development targets elements that are nested within another element, allowing for styling or manipulation of all matching elements using CSS */
+
+        div p{
+            color: chartreuse;
+        }
+
+        /* Universal selector : A universal selector in web development targets all elements on a webpage, allowing for global styling or manipulation using CSS.*/
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+
+        /* The pseudo-selector "a:visited" targets visited links on a webpage, changing their color to yellow.*/
+        a:visited{
+            color: yellow;
+        }
+
+        /* The pseudo-selector "a:link" targets unvisited links on a webpage, changing their color to green. */
+        a:link{
+            color: Green;
+        }
+
+        /* The pseudo-selector "a:active" targets links that are currently being clicked or activated, changing their background color to red. */
+    
+        a:active{
+            background-color: red;
+        }
+
+        /* The pseudo-selector "a:hover" targets links when the mouse cursor hovers over them, changing their background color to chocolate. */
+
+        a:hover{
+            background-color:chocolate;
+        }
+
+        /* The pseudo-selector "p:first-child" targets the first paragraph element among its siblings, changing its background color to blueviolet. */
+        p:first-child{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="red">
+        I am a div.
+        <article>
+            <p>
+                I am paragraph inside <div></div>
+            </p>
+        </article>
+        <p>
+            I am Child para
+        </p>
+    </div>
+    <div id="id">
+        I am a Doctor
+    </div>
+
+    <a href="https://www.google.com" target="_blank">Go to Google</a><br>
+    <a href="https://www.zudio.com">Go to Zudio</a>
+
+    <div class="one">
+        I am One
+    </div>
+</body>
+</html>
