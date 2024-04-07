@@ -1,0 +1,70 @@
+<!--All about color css-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        h1{
+            color: darkred;
+            text-decoration: underline;
+            text-decoration-style: solid;
+            text-decoration-color: aqua;
+            text-decoration-thickness: 5px;
+
+            /* Reference(Colors existed in CSS): https://codepen.io/web-dot-dev/pen/ZELGraM */
+        }
+        p{
+            color: #6e4d8f;
+        }
+        ol > li{
+            color:rgb(178, 11, 128);
+        }
+        dl{
+            color: rgba(190, 47, 218, 0.74);
+            /* Here alpha stands for opacity . By default value is 1*/
+        }
+        .last > p{
+            color: hsl(39, 100%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Let's Learn About colors</h1>
+    <p>
+        Color can be represented in:
+        <ol>
+            <li>Color Keywords</li>
+            <li>Hex Color Code</li>
+            <li>RGB</li>
+            <li>HSL</li>
+        </ol>
+    </p>
+    <dl>
+        <h1>HSL</h1>
+        <p>HSL stands for hue, saturation, and lightness. This is another way to set colour properties.</p>
+        <p>Breaking each keyword:</p>
+        <h3>
+            <dt>Hue(h) : </dt>
+            <br>
+            <dd>Hue represents the type of color. It is measured in degrees, and its value lies from 0 to 360.0 degree represents black, 120 degree is for green, and 360 degree is for blue.</dd>
+            <br>
+            <dt>Saturation (S):</dt>
+            <br>
+            <dd>Saturation controls the intensity or purity of the color. It is measured in percentage, and its value lies between 0% and 100%.
+            0% saturation is no color (grayscale),  and 100% saturation is the most intense colour.</dd>
+            <br>
+            <dt>Lightness (L):</dt>
+            <br>
+            <dd>Lightness determines how light or dark the colour is. It is measured in percentage, and its value lies between 0% and 100%.
+            0% lightness represents pure black, 50% lightness represents normal colour, and 100% lightness is pure white.</dd>
+            <br>
+            
+        </h3>
+    </dl>
+    <div class="last">
+        <p>This is All About Colors in CSS</p>
+    </div>
+</body>
+</html>
