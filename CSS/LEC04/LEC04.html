@@ -1,0 +1,84 @@
+<!--Author : Joshi Divyang-->
+
+<!--CSS Box Model - Margin, Padding & Borders : 
+    
+The CSS Box model defines how elements are rendered and how their dimensions are calculated.
+It describes the structure of an element as a rectangular box that has content, an, padding, a borderd a margin.
+The box model consists of four main components, which are
+
+1. Content
+The innermost component of the box model is the actual content of the element. It can be text, image, video, etc.The content area is defined by the width and height properties.
+
+2. Padding
+The space between the actual content and the border of the element is the padding.
+The padding area is defined by the property padding.
+
+3. Border
+The border surrounds the content and padding and gives the visual border of the element.
+The border properties can be controlled using the border keyword.
+
+4. Margin
+The margin is the space outside the element that separates it from other elements in the layout.
+The margin of the element is controlled by the margin property.
+
+The total width and height of the element is calculated with the formula:
+
+Total Width = Width + Left Padding + Right Padding + Left Border + Right Border + Left Margin + Right Margin
+
+Total Height = Height + Top Padding + Bottom Padding + Top Border + Bottom Border + Top Margin + Bottom Margin-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+
+        }
+
+        .box1{
+            color: yellow;
+            padding: 10px;
+            margin: 25px;
+            height: 200px /*Only Content height*/;
+            border: 2px solid blue;
+            box-sizing: border-box/* height = content + padding*/;
+            background-color: aqua;
+        }
+
+        .box2{
+
+            
+            background-color: bisque;
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            height: 200px /*Only Content height*/;
+            border: 2px solid blue;
+            box-sizing: border-box/* height = content + padding*/;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am a Box
+    </div>
+    <div class="box box2">
+        I am another Box
+    </div>
+
+    <!-- Margin Collapse :
+    
+    If both box1 and box2 have a margin of 25px from all four sides, you might expect the margin between them to be 50px (25px from the top of box1 to the bottom of box2 plus 25px from the bottom of box1 to the top of box2). However, in CSS, when two vertical margins touch, they do not double up. Instead, the larger of the two margins prevails while the smaller one collapses, resulting in a margin between the boxes of only 25px. This behavior is known as margin collapsing.-->
+</body>
+</html>
