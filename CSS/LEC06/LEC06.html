@@ -1,0 +1,53 @@
+<!--All About CSS Specificity & Cascade-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+
+    <!--CSS Specificity : CSS specificity determines which CSS rule is applied to an element when there are conflicting styles.
+    In CSS, There is The Cascade Algorithm for it .
+    CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+    Reffer for more details : https://www.codewithharry.com/tutorial/css-specificity/  -->
+
+    <style>
+
+        /* The specificity of this selector is 1 */
+        h1{
+            color: aqua;
+        }
+        
+        /* The specificity of this selector is 1 + 10  = 11*/
+        h1.yellow{
+            color:darkred;
+        }
+
+        /* The specificity of this selector is 10 */
+        .cred{
+            color:darkred;
+        }
+
+        /* The specificity of this selector is 10 */
+        .cpurple{
+            color: purple;
+        }
+
+        /* Attribute selector. The specificity of this selector is 10*/
+        [data-x=a]{
+            background-color: bisque;
+        }
+
+        /* Quiz 
+        1 (element) + 20 (classes) + 10 (attribute) + 10 (pseudo-class) = 41.*/
+        a.harryclass.rohan-class[href]:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+</html>
