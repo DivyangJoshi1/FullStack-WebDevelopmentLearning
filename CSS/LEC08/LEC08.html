@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Display Property</title>
+    <style>
+
+        /* The display CSS property sets whether an element is treated as a block or inline box and the layout used for its children, such as flow layout, grid or flex. */
+        
+            * {
+              margin: 0;
+              padding: 0;
+            }
+            .Box {
+              border: 2px solid blue;
+            /* The display: inline; and display: inline-block; properties in CSS control how an element is displayed on the page. Here are the key differences between them:
+
+            display: inline : 
+
+            No Block Formatting Context: Elements with display: inline; do not start on a new line and only take up as much width as necessary. They flow with the surrounding text.
+            Width and Height: You cannot set the width or height properties on inline elements. Any width and height values are ignored.
+            Padding and Margin: Only horizontal padding and margin (left and right) have any effect. Vertical padding and margin (top and bottom) do not push other elements away.
+
+            display: inline-block: 
+
+            Block Formatting Context in Inline Flow: Elements with display: inline-block; are similar to inline elements in that they do not start on a new line, but they behave like block elements in that you can set their width and height.
+            Width and Height: You can set the width and height properties on inline-block elements, and they will be respected.
+            Padding and Margin: All padding and margin values (top, right, bottom, left) are respected and can push other elements away.
+            Align with Text: Inline-block elements align with the surrounding text like inline elements, allowing them to sit next to each other or text content. */
+
+              display: inline-block;
+              padding: 45px;
+              margin: 35px;
+
+              
+            }
+
+            .Box1{
+                width: 346px;
+                /* display: none; */
+                /* visibility: hidden; */
+
+                /* display: none; completely removes an element from the document flow, making it take up no space on the page, while visibility: hidden; hides the element but still maintains its space in the layout. Neither property allows interaction with the hidden element. */
+
+                /* display: flex; is a CSS property that creates a flexible container for its child elements, allowing for easy alignment and distribution of space within the container using the Flexbox layout model.
+                
+                display: flex; justify-content: center; is used to create a flex container that centers its child elements horizontally within the container. This makes it easy to align items in the middle of the container.*/
+
+                display: flex;
+                /* display: inline-flex; */
+                justify-content: center;
+            }
+            
+    </style>
+  </head>
+  <body>
+
+    <!-- For more info : 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+    
+    <div class="Box Box1">I am box</div>
+    <div class="Box Box2">Also a nice box</div>
+    <span> I am good boy </span>
+  </body>
+</html>
