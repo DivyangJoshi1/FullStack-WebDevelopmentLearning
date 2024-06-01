@@ -1,0 +1,110 @@
+<!--CSS Sizing Units - px, rem, em, vh, vw, % & more -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sizing Units</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        border: 2px solid black;
+        background-color: aquamarine;
+        /* width: 1280px; Resolution of my screen */
+        box-sizing: border-box;
+
+        /* However, on a small screen, the width is limited, and the website will not fit properly. 
+            so instead of px , we use vw  
+            width : 100 vw means  that the element will take up 100% of the viewport width. 
+            In other words, the element will stretch to the full width of the browser window.*/
+
+        width: 80vw;
+        height: 10vh;
+        margin: auto;
+
+        /* Setting margin: auto; means that the browser will automatically adjust the margins on all sides (top, right, bottom, and left) of the element, 
+            centering it horizontally within its containing element. 
+            This is commonly used to center block-level elements such as divs within their parent containers */
+      }
+
+      .container {
+        border: 2px solid black;
+        background-color: aquamarine;
+        box-sizing: border-box;
+        width: 80vw;
+        /* height: 80vh; */
+        /* font-size: 16px; */
+
+        /* Setting height: 80vh; means that the height of the element will be 80% of the viewport height. 
+        The vh unit stands for "viewport height," so 80vh is 80% of the height of the browser window. */
+
+        margin: 23px auto;
+
+        /* Here margin: 23px auto means 23px margin for top and bottom and auto for left and right */
+
+        min-height: 80vh;
+         
+        /* means the element's minimum height will be 80% of the viewport's height. 
+        This ensures that the element will be at least 80% as tall as the current height of the viewport, but it can grow taller if its content requires it */
+      }
+
+      /* Now another important units are rem and em  */
+
+      html{
+        font-size: 12px;
+      }
+      .container p{
+        /* font-size: 2em; */
+        /* Thus, setting font-size: 2em in the .container p rule makes the font size of the paragraph elements inside the container 32px. */
+        font-size: 2rem;
+        /* In CSS, the rem unit is similar to the em unit, but it is relative to the root element's (typically the <html> element) font-size, rather than the parent element's font-size.
+        here size will be 24px */
+    }
+
+    .mycont{
+        background-color: red;
+        color: yellow;
+        font-size: 22px;
+        width: 100vmin;
+        /* width: 100vmin; means the element's width will be 100% of the viewport's smaller dimension (either the width or the height, whichever is less). 
+        This ensures the element's width adapts to fit within the smallest side of the viewport. */
+    }
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units  
+    Can refer this for more units*/
+
+    .mycont1{
+        box-sizing: border-box;
+        border: 2px solid black;
+        margin: 23px auto;
+        color: black;
+        font-size: 22px;
+        width: 80vw;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box">This is a box</div>
+
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloribus
+            sed officiis minima. Dicta atque repellat impedit quisquam eos illum, modi
+            eius mollitia.
+        </p>
+
+    </div>
+
+    <div class="mycont">
+        I am another container
+    </div>
+
+    <div class="mycont1">
+        I am another container
+    </div>
+  </body>
+</html>
