@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+    <style>
+        .box{
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+             
+            /* here content overflow outside the border. then how to fix it ? */
+
+            /* The overflow: scroll; CSS property forces a scrollbar to appear, regardless of whether the content overflows the element's box or not. */
+            overflow: scroll;
+            
+            /* The overflow: auto; CSS property ensures that if the content overflows the element's box, scrollbars will be added as needed. This means that vertical or horizontal scrollbars will appear only if the content exceeds the element's dimensions. */
+            overflow: auto;
+            white-space: nowrap;
+            /* text-overflow: ellipsis;  */
+            /* overflow: clip; hides overflow content and prevents any interaction with it.
+               foverflow: hidden; hides overflow content but still respects the element's scrollability properties. 
+               
+               we can also manage overflow-x and overflow-y individually
+               ex : overflow-x: hidden;
+                    overflow-y: auto*
+               we can also write like this : overflow: hidden auto*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        I am a good boy. I love to write Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem quos repudiandae quaerat, ad voluptas beatae quasi voluptates dolor soluta nam non earum, amet ducimus aspernatur eaque esse laboriosam reprehenderit porro eveniet iste. Ut, eius.
+    </div>
+</body>
+</html>
