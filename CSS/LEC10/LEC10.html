@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists using CSS</title>
+    <style>
+        nav ul li{
+            /* The list-style: devanagari; CSS property sets the list item marker style to use Devanagari numerals (used in Hindi and other Indian languages). This means the list items will be numbered using the Devanagari numbering system (e.g., १, २, ३, ...). 
+            
+            If list-style: none; is applied to a list in CSS, it removes all default list item markers*/
+
+            list-style: devanagari;
+            background-color: yellow;
+            /* here marker is outside listitem as bcolor not applied to it.
+            but what if we want to apply background color to marker.Then we use list-style-position:*/
+            list-style-position: inside;
+            border: 2px solid black;
+            /* can we replace it(marker) to image ? 
+            we can achieve it by list-style-image*/
+
+            /* list-style-image: url("https://user-images.githubusercontent.com/14011726/94132137-7d4fc100-fe7c-11ea-8512-69f90cb65e48.gif"); */
+
+            /* wer can also set marker to an emoji 
+            use list-style-type for it*/
+            list-style-type: "😄";
+
+            /* we can also use disc and image both at one time  
+            list-style-type:disc inside url("")*/
+
+            /* Note : if we add any property in element.style , it directly adds it as inline css*/
+
+        }
+    </style>
+</head>
+<body>
+    <!-- The <nav> tag in HTML is used to define a section of a document intended for navigation links. It typically contains a list of links to other parts of the website or different web pages, helping users to navigate through the site easily. -->
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
