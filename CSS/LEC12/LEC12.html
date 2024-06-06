@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 133px;
+            width: 80vw;       
+            margin: 3px;
+            padding: 3px;
+            border:2px solid black;
+        }
+        .box1{
+            position: relative;
+            z-index: 1;
+            background-color: antiquewhite;
+            position:absolute;
+            top:0px;
+            left:3px;
+            /* position: sticky;
+            top: 0px;
+            height: 111px;
+            width:100%;
+            margin: 0;
+            padding: 0; */
+        }
+        .box2{
+            background-color: aquamarine;
+            position: relative;
+            top: 34px;
+            left: 56px;
+        }
+        .box4{
+            background-color: cadetblue;
+            }
+            
+            .parent{
+                padding: 43px;
+                margin: 34px;
+                border: 2px solid purple;
+                position: sticky;
+                }
+                
+                .box3{
+                    background-color: burlywood;
+                    /* position: fixed;
+                    bottom: 0px;
+                    left: 8vw;
+                    height: 111px; */
+                }
+        /* The position: static property in CSS is the default for all elements, meaning they are positioned according to the normal document flow without any special positioning. This default setting doesn't respond to top, right, bottom, or left properties and ensures elements stay in the natural order as defined in the HTML. 
+        
+        if we apply top in element.style , it does not respond. but what if we want to apply top , right , bottom or left properties ? 
+        
+        position: relative in CSS means an element is positioned relative to its normal position in the document flow. You can then use the top, right, bottom, and left properties to adjust its position from where it would normally be placed, without affecting the layout of surrounding elements. 
+        like : top : 5px;
+        left: 114px; 
+        by this we can also stackup two boxes. in static , we can not do that. here box 2 stackup on box1.
+
+        but what if we want box1 overlap on box2. then we have to set zindex value.
+        here z-index value must be one bcz if it's greater than 1 than box2 stackup on box1
+        to set z-index value we have to add position:relative; in both boxes.
+        
+        what is position:absolute ? 
+        position: absolute in CSS means an element is removed from the normal document flow and positioned relative to its nearest positioned ancestor (an ancestor with a position value other than static). If no such ancestor exists, it will be positioned relative to the initial containing block (usually the <html> element). You can use the top, right, bottom, and left properties to specify its exact position.
+
+        what is position:fixed means ? 
+        position: fixed in CSS means an element is positioned relative to the viewport, so it stays in the same place even when the page is scrolled. The top, right, bottom, and left properties are used to set its exact position within the viewport. This element is removed from the normal document flow, meaning it does not affect the layout of other elements. 
+        
+        what is position:sticky ?
+        position: sticky in CSS means an element toggles between relative and fixed positioning based on the user's scroll position. It acts like relative until it reaches a specified threshold (defined by top, right, bottom, or left), then it switches to fixed, sticking in place as the user continues to scroll. This is useful for elements that you want to remain visible within a certain scroll area.
+        it's very poular while creating navbar.
+        
+        transform,filter or perspective properties can also make an element appear as positioned
+        what does it mean ?
+        
+        concept : if parent has no position property and child has absolute position then it sets according to html body.if parent has position property and child has absolute position then it sets according to it's parent. but there is exception case in transform , filter , perspective .
+        if we have transform:translate(0);
+        or         filter:invert(0)
+        or         perspective:0em 
+        then it's sets according to it's parent rather than html body.
+        
+        uncomment property section one by one to see it's frontend nature/*/
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div> 
+</body>
+</html>
