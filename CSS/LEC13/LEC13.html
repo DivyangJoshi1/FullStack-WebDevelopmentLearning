@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <style>
+        /* Global variable */
+        :root{
+            --color: rgb(159, 44, 172);
+            --seccolor: aqua;
+            --bordercolor:black;
+
+            /* here not necessary that variable can contain only color property . it can be used for anything like padding , margin etc. */
+            --padding: 36px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+            padding: 34px;
+            
+        }
+        ul li:first-child{
+            /* local variable */
+            --color: rgb(172, 44, 44);
+            background-color: var(--color);
+            padding: var(--padding);
+        }
+        ul{
+            display: flex;
+            border: 2px solid var(--bordercolor);
+        }
+        .nav{
+            background-color: var(--color);
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+        .container1{
+            background-color: var(--color1,rgb(116, 18, 72));
+            /* here fallback color used when variable not found */
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam possimus minus qui est, natus doloremque deserunt ab, cupiditate hic dolorem doloribus culpa corporis adipisci recusandae.
+    </div>
+    <div class="container1">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus neque minus eum tenetur odio.
+    </div>
+</body>
+</html>
