@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows and Outlines</title>
+    <style>
+      /* Box-shadow : In CSS, a box shadow is a styling effect that adds a shadow to an element's frame, providing a three-dimensional look. It is specified using the box-shadow property, which includes values for horizontal offset, vertical offset, blur radius, spread radius, and color.
+      
+      syntax : 
+      box-shadow: h-offset v-offset blur spread color inset;
+      
+      tip : when you want to change css then always prefer inspect for preview first.
+      Always first do this
+      
+      Click on box-shadow and by diagram you can preview shadow then choose proper value from it and then add it in the original code. 
+      
+      
+      what is text-shadow ?
+      We can give shadow to our text content same as box shadow. 
+      
+      syntax : 
+      text-shadow: h-offset v-offset blur color;*/
+
+      .box {
+        border: 2px solid black;
+        padding: 34px;
+        box-shadow: 5px 5px 15px 5px #231456;
+        border-radius: 5px;
+        outline: 2px solid blue;
+      }
+
+      .textshadow{
+        text-shadow: 2px 2px 4px #231456;
+      }
+
+      /* Now what is Outlines ? 
+       An outline is a line that is drawn around elements, outside the borders, to make the element "stand out". It's commonly used for accessibility purposes, like highlighting focused elements.
+       
+       syntax : 
+       outline: width style color;
+       
+       Differences between Outlines and Borders: 
+       While both can visually appear similar, outlines differ from borders in a few ways:
+
+       Position: Outlines don't take up space; they're drawn around the element, outside of any border.
+       Offset: Using the outline-offset property, you can set the space between an outline and the edge or border of an element.
+       Width: Borders can have varying widths on different sides, outlines have a uniform width.
+       Rounded Corners: Borders can have rounded corners using border-radius, while outlines generally cannot.
+       outline always follow border radius and set according to it.*/
+    </style>
+  </head>
+  <body>
+    <div class="box">I am a box</div>
+    <p class="textshadow">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate expedita doloribus cumque consequatur maiores quo alias ullam, accusamus odio soluta enim tenetur! Quas commodi inventore quidem ratione qui, vero laborum repellat temporibus perferendis quo?
+    </p>
+        
+  </body>
+</html>
