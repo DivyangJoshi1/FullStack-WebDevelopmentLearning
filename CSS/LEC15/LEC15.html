@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            /* display: flow-root; makes an element handle its floating children properly, so they don't spill out or affect surrounding elements. It's like creating a self-contained box for the element and its contents. */
+            display: flow-root;
+        }
+        .card{
+            border: 2px solid violet;
+        }
+        img{
+            /* float: left; in CSS makes an element move to the left side of its container, allowing other content to flow around it on the right side.*/
+            /* float: left; */
+            float: right;
+        }
+
+        /* now i wanted my div of card2 not allow image or any other container in right side . so what can i do ? 
+        we use clear property for it*/
+
+        .card2{
+            background-color: aquamarine;
+            clear: right;
+            /* clear: right; in CSS prevents an element from being positioned next to (or wrapping around) any floated elements on the right side. Instead, it will move below those floated elements. 
+            it allows to float in left bcz there is no clarification. if we want to not allow in both side we use clear:both */
+
+            /* to see floating left comment this clear property line */
+
+            /* tip: do not use float and clear. it is only for knowledge purpose . use flexbox for it.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <img src="img.jpeg" alt="image is loading" width="230px">
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, expedita ad quod laudantium eum molestiae aliquam provident minima iure nam sapiente, perspiciatis maiores.</div>
+        <div class="card card2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sed officia repellendus. Accusantium quod aliquid consequuntur, sed ad nisi! Iure reprehenderit placeat sit, voluptatum aperiam at sapiente laboriosam molestiae ducimus laborum accusamus quam autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci nemo voluptas placeat hic explicabo nobis, officiis laborum quisquam quasi saepe quo iste quaerat veniam laudantium earum, labore commodi nulla architecto dolore! Magnam, sit magni, optio iusto iure corrupti, saepe cupiditate asperiores consequuntur illum dolorum facere! Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis hic id rem illum! Tenetur quod inventore repellat. Laboriosam debitis saepe ea? Quod veritatis cupiditate dolorum quibusdam! Laborum, error delectus asperiores rerum quidem nostrum cupiditate! Voluptatum labore, dolores, commodi alias pariatur sint reiciendis, rerum voluptatibus optio magni velit quisquam recusandae eos nobis? Illo doloribus porro, necessitatibus quis expedita provident id consequuntur? Cum ad sunt perspiciatis, ab facere debitis libero tempora, aliquam rerum dignissimos dolores consequatur earum dolor accusamus, quidem laudantium esse vel consectetur beatae. Aliquid qui deserunt tenetur eum commodi nam repudiandae, esse excepturi, quod, ipsa mollitia? Fugit hic, ipsa ullam voluptatum sint laborum cupiditate id eum, incidunt eveniet voluptate tempore libero similique maiores consectetur molestiae impedit ducimus accusantium quidem delectus? Dolore sint fugit est vel dolorum distinctio aperiam alias unde architecto aspernatur corporis rem totam quia veniam ipsa mollitia, obcaecati quo. Rem inventore tenetur eaque cum corporis nulla illo sint maiores nostrum, tempore nisi ut molestiae dignissimos, temporibus ea commodi ex voluptatibus in sunt distinctio officia eligendi? Labore, aspernatur minus? Eveniet minima autem exercitationem sequi perspiciatis voluptate rem eum quia cum voluptatum ullam, quos blanditiis quisquam omnis accusantium quae impedit asperiores velit, enim nostrum consectetur possimus! Aspernatur itaque in fugiat, temporibus laboriosam optio exercitationem natus molestiae voluptatibus vitae incidunt quia, aut voluptate iste veritatis, recusandae quas. Facilis, vel soluta. Minima cupiditate nesciunt qui beatae iste iusto! Vero laboriosam exercitationem quas nemo recusandae sapiente neque rerum! Sunt iusto reiciendis quaerat vero enim ducimus exercitationem iste quisquam distinctio beatae consequatur tempore cumque quibusdam aut rem, expedita repellat mollitia adipisci hic commodi sit in voluptate. Corrupti enim voluptates officiis voluptas omnis hic ducimus nesciunt accusamus in tenetur sit, deserunt, nisi soluta! Itaque architecto cum doloremque ea non corporis officiis beatae nostrum voluptates, possimus similique alias adipisci, quasi at consequatur natus odio illum unde consequuntur quibusdam velit eaque. Itaque quis ipsum recusandae ad excepturi fugit perferendis delectus dolores quam iure neque cumque error sapiente totam harum voluptatibus, omnis magni ut, dolor quae, laboriosam provident. Cumque, error ut eveniet reprehenderit non illum debitis fugit quas ipsam ea alias quidem harum enim consequuntur autem ducimus suscipit. Dignissimos veritatis aspernatur dolore ab hic itaque vitae expedita aliquid eum. Eos ipsa harum, saepe quibusdam similique voluptatibus iusto veritatis quos velit ab sequi, id dolores placeat, unde exercitationem sapiente iure voluptatem? Illum, consequatur expedita nulla molestias delectus reprehenderit, accusantium id consequuntur quisquam deleniti eveniet? Quo est dolores optio quae fugit debitis, dolorum at magni doloribus blanditiis laborum vero, voluptatum deleniti temporibus cumque obcaecati. Eveniet, necessitatibus possimus iusto dolorem laudantium quis exercitationem repellendus totam quo excepturi repudiandae autem aperiam nostrum minus atque aspernatur deserunt earum optio impedit id? Quo eius ullam distinctio, cupiditate illo neque in optio possimus repudiandae consequatur quisquam accusantium corrupti. Repellat adipisci unde architecto reiciendis praesentium? Reiciendis inventore adipisci itaque, architecto dicta odit tempora ullam recusandae autem fugit, voluptate quos nihil delectus placeat. Deserunt, ullam nobis? Nesciunt, quae a corporis dolorem accusantium nisi obcaecati explicabo quo ex nostrum amet dolore reprehenderit rem provident cupiditate cumque odit sed saepe pariatur quod ducimus nemo cum? Ex, quisquam, nisi incidunt unde laboriosam aut magnam, vero rem sit a beatae amet. Dolore corporis animi, quidem repellendus suscipit eum fugiat sit saepe odit eligendi eos molestias sint possimus placeat alias ut quaerat molestiae natus, illum ipsa, inventore dolores nobis. Soluta unde porro in fuga neque quod! Suscipit quam magni soluta commodi atque provident, delectus inventore earum assumenda corporis?</div>
+        <div class="card">Card3</div>
+    </div>
+</body>
+</html>
