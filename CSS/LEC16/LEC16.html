@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /* .boxes *{
+            color: blue;
+            border: 2px solid black;
+        } */
+
+        /* .box:first-child{
+            background-color: aquamarine;
+        }
+
+        .box::first-line{
+            color: brown;
+        } */
+
+        /* p, a, .box, [data-color="primary"]{
+            margin-top: 45px;
+            padding-top: 20px;
+        } */
+
+        /* .box:nth-child(even){
+            background-color: blanchedalmond;
+        } */
+
+        /* .box:nth-last-child(3){
+            background-color: blanchedalmond;
+        } */
+
+        /* we can add content by css dynamically. it called as pseudo elements.
+        This CSS code adds the text "hey, I am Divyang" before the content of every element with the class boxes. */
+        .boxes::before{
+            content: "hey , I am Divyang";
+        }
+        .boxes::after{
+            content: "I am CSE Student";
+            color: brown;
+            background-color: antiquewhite;
+        }
+
+        ::selection{
+            color: chocolate;
+            background-color: black;
+        }
+
+        .box::first-letter{
+            color: blueviolet;
+            font-size: 35px;
+        }
+        
+        input::placeholder{
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box" data-color="primary">
+            Hey , I am box
+        </div>
+        <div class="box">
+            Hey , I am box
+        </div>
+        <div class="box">
+            Hey , I am box
+        </div>
+        <input type="text" placeholder="Type your name here"><br><br>
+    </div>
+</body>
+</html>
