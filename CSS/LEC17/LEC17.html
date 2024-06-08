@@ -1,0 +1,112 @@
+<!-- Author : JOSHI DIVYANG BHARATBHAI -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox </title>
+    <style>
+        .container{
+            display: flex;
+            border: 2px solid blueviolet;
+            height: 80vh;
+            /* justify-content: center; */
+            align-items: center;
+            /* Check all attribute of align-items and  justify-content properties by using inspect. */
+
+            /* Now what is flex-direction concept and what is it's default value ?
+
+            flex-direction determines the direction of flex items within a container. Its default value is row, which arranges items horizontally from left to right. Other values include row-reverse, column, and column-reverse. */
+
+            /* Now what is flexwrap concept ? 
+            The flex-wrap concept in CSS is used  in flexbox layouts to control whether the flex items should stay in a single line or wrap onto multiple lines. When flex-wrap is set to wrap, items will wrap onto new lines if there's not enough space on one line. */
+
+             flex-direction: row;
+
+            /* check column-reverse , row and row-reverse using inspect. */
+
+            flex-wrap: wrap;
+            align-content: center;
+
+            /* There is no justify items in flexbox 
+            
+            there is also another property named as wrap-reverse*/
+
+            flex-flow: row wrap;
+
+            /* here row is flex direction and wrap means flex wrap */
+
+            gap: 30px;
+            /* it defines gap between items. 
+            we can also define column gap and row gap.
+            we can also define both in same line like gap:30px 40px; 
+            here 30px shows row gap and 40px is column gap*/
+        }
+        .item{
+            margin: 4px;
+            border: 2px solid black;
+            height: 92px;
+            width : 92px;
+            background-color: aquamarine;
+
+            /* 
+            The flex-grow property in CSS is used in flexbox layouts to specify how much a flex item should grow relative to the other items inside the same container. A value of flex-grow: 1 means the item will grow to take up any remaining space in the container equally with other items that also have a flex-grow value set. A value of flex-grow: 0 means the item will not grow and will only take up the space it needs. */
+
+            /* flex-grow: 1; */
+        }
+
+
+        /* The order: 1 property in a flex item means that this item should be displayed after any items with the default order value (which is 0) or items with lower order values. In other words, it gives the item a higher priority to appear later in the flex container compared to items with order: 0 or negative values. 
+        
+        by default item's order is 0.*/
+
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+
+        .item1{
+            /* flex-grow: 2; */
+            /* The flex-grow: 2; property means the flex item will grow to take up twice as much remaining space as an item with flex-grow: 1. */
+
+            /* The flex-shrink: 2; property means the flex item will shrink twice as much as an item with flex-shrink: 1 when there isn't enough space in the container. */
+
+            /* flex-shrink: 2; */
+
+            align-self: flex-end;
+            /* we can override particular item's alignment by this */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item">5</div>
+            <div class="item order-3">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <!-- <div class="item">9</div>
+            <div class="item">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+            <div class="item">16</div>
+            <div class="item">17</div>
+            <div class="item">18</div>
+            <div class="item">19</div>
+            <div class="item">20</div> -->
+        </div>
+    </main>
+</body>
+</html>
