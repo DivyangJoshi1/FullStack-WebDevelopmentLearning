@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid black;
+
+            display: grid; 
+            /* in CSS means creating a grid-based layout where elements are arranged in rows and columns. 
+            
+            we can also define no of rows and columns in grid.*/
+
+            /* grid-template-columns: 120px 100px; means the grid will have two columns, the first column will be 120 pixels wide and the second column will be 100 pixels wide. */
+            /* grid-template-columns: [first]120px [second]100px;
+            grid-template-rows: 100px 100px 100px; */
+
+            /* here fr means fraction 
+            here total width is 80vw and 3 times 1fr means it divides 80 in 3 fractin parts*/
+
+            grid-template-columns: 1fr 1fr 1fr;
+
+            /* here we can also define name of grid lines like [first] and  [second]*/
+
+            /* we can also use gap property same as flex. */
+
+            justify-items: center;
+            align-items: center;
+
+            /* grid-template-columns: repeat(4,40px) */
+        }
+
+        .items{
+            border: 2px solid maroon;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item1{
+            /* grid-row: 1/2; means the grid item will occupy the space from the start of row 1 to the start of row 2, effectively placing it in the first row. */
+
+            grid-row: 1/2;
+            /* we can also write grid-row:first and grid-row:second
+            means by grid line name */
+
+            /* here same for grid:column */ 
+            grid-column: 1/2;
+        }
+
+        .item4{
+            grid-row: 1/2;
+
+            /* we can also write it in seperate like grid-row-start: 1 and grid-row-end: 2;; */
+
+            grid-column: 1/2;
+        }
+
+        /* here item1 and item4 overlap eachother */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items item1">1</div>
+        <div class="items item2">2</div>
+        <div class="items item3">3</div>
+        <div class="items item4">4</div>
+        <div class="items item5">5</div>
+    </div>
+</body>
+</html>
