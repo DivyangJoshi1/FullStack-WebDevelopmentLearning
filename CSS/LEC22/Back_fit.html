@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background Image Fit</title>
+    <style>
+        .container{
+            height: 466px;
+            width: 488px;
+            border: 2px solid black;
+            background-image: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D");
+
+            /* background-position: top right; */
+
+            background-position: center center;
+
+            /* if we put small image then img will be repeat in frame  
+            for that we have to use background-repeat property
+            */
+
+            /* background-repeat: no-repeat; 
+            
+            background-repeat: repeat-x means it will repeat in x and not repeat in y. */
+
+            background-clip: border-box;
+            /* use mdn for reference */
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    </div>
+</body>
+</html>
