@@ -1,3 +1,4 @@
+//Author : JOSHI DIVYANG BHARATBHAI
 // In JavaScript, alert("Hello world") is a command that creates a pop-up message box displaying the text "Hello world."
 alert("Hello world") 
 
