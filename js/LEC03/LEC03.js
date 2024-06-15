@@ -1,3 +1,4 @@
+//Author : JOSHI DIVYANG BHARATBHAI
 // All about JavaScript Conditionals And Operators 
 // Conditional statements are used to perform different actions based on different conditions.
 
