@@ -22,7 +22,7 @@ This repository is a collection of notes and code examples to help you learn and
 ## HTML
 - [LEC : 01 All About Basic Structure of HTML]
 - [LEC : 02 Learn all part of structure in detail.]
-- [LEC : 03 Learn all part of structure in detail.]
+- [LEC : 03 Learn about Heading Paragraphs and Emmet]
 - [LEC : 04 All about Links, images and Anchor Tag]
 - [LEC : 05 All about Lists and Tables]
 - [LEC : 06 All About Forms and Input Tags]
