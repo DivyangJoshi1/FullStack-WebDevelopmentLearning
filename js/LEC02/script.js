@@ -1,3 +1,4 @@
+// Author : JOSHI DIVYANG BHARATBHAI
 // It prints "Hey , This is Tutorial of Variables." in console.
 console.log("Hey , This is Tutorial of Variables.")
 
