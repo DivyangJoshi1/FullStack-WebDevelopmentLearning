@@ -1,3 +1,4 @@
+//Author : JOSHI DIVYANG BHARATBHAI
 let a = [1,93,5,6,88]
 
 //iterating through classical for loop
