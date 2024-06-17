@@ -1,0 +1,77 @@
+<!-- Author : JOSHI DIVYANG BHARATBHAI -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model in JavaScript</title>
+</head>
+<body>
+    <!-- Concept of DOM -->
+    <!-- DOM : DOM Stands for Document Object Model.
+    
+    It does mapping of the entire webpage as object-
+    so que is that we dom is required :
+    The Document Object Model (DOM) is required because it allows JavaScript to interact with and manipulate a webpage's content, structure, and style dynamically. By mapping the entire webpage as objects, the DOM provides a way to access and modify elements of the page using JavaScript.
+    
+    we have css to change styling of the webpage and html to handle structure of the webpage. so why we need to change it dynamically by dom as you say in js ?
+
+    Interactivity:
+
+    Example: When a user clicks a button, JavaScript can dynamically change the content, such as displaying a hidden section or changing the text of a button.
+    User Experience:
+
+    Example: Providing instant feedback to user actions, like highlighting form fields with errors without needing to reload the page.
+    Dynamic Content Loading:
+
+    Example: Fetching data from a server and updating the webpage content without a full page reload, like updating a list of comments on a blog post in real-time.
+    Responsive Design Adjustments:
+
+    Example: Adjusting the layout or elements based on screen size or orientation changes, enhancing the user experience across different devices.
+    Animations and Effects:
+
+    Example: Creating smooth transitions, animations, and effects that improve the visual appeal of the site, such as sliders, modals, or tooltips.
+    Personalization:
+
+    Example: Customizing the content and layout based on user preferences or behaviors, such as showing recently viewed products.
+    By using the DOM with JavaScript, developers can create more dynamic, responsive, and interactive websites that enhance the overall user experience beyond what static HTML and CSS can achieve alone.-->
+
+    <!-- Another Concept : BOM (Browser Object Model.
+     
+    Browser Object Model(BOM) represents additional objects provided by the browser(host environment) for working with everything except the document)
+    
+    The functions alert/confirm/prompt are also a part of the BOM.
+    
+    location.href="https://https://www.google.com/"
+    Redirect to another URL
+    
+    So Now window object , BOM ,DOM :
+    we have the following when javascript runs in a browser
+    window object represents browser window and provides methods to control it.It is global object
+    ex: window.document
+        window.document.body
+        
+    so here question is that why we need to study this ? 
+    so by using js we can target element of the webpage
+    
+    now check image in this folder. if we right click in any element of the webpage the it's value will be $0 and by targeting it we will change we want like $0.style.backGroundColor="green
+    
+    in summary , DOM provides tree like structure to iterate through the website for targeting it's element. "-->
+    <div class="container">
+        <div class="box">
+            This is box inside container.
+        </div>
+    </div>
+
+
+    <script>
+        document.title="This is my webpage!"
+        console.log(document.title) //here it shows title of the webpage in the console
+        console.log(document.body ) //here it shows entire body tag content in the console.it means page body as js object.
+
+        // now if we want to change background color of the webpage we can do it by js
+
+        document.body.style.backgroundColor="aqua"
+    </script>
+</body>
+</html>
