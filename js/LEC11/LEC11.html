@@ -1,0 +1,126 @@
+<!-- Author : JOSHI DIVYANG BHARATBHAI -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting and Removing Elements using JavaScript</title>
+ </head>
+ <body>
+    <div class="container">
+        <div class="box">Hey , I am Box</div>
+    </div>
+    <div class="container2">
+        <div class="pbox">
+            <div class="ebox">
+                This is an example box
+            </div>
+            <div class="xbox" id="xbox">
+                This is x box
+            </div>
+        </div>
+    </div>
+    <script src="LEC11.js">
+    </script>
+ </body>
+ </html>
+
+ <!-- here first we write container div and box div inside it. so in console write
+
+  (1)document.querySelector(".box")
+  A: <div class="box">Hey , I am Box</div>
+  (2) document.querySelector(".box").innerHTML
+  A: 'Hey , I am Box'
+  (3)document.querySelector(".container").innerHTML
+  A:<div class="pbox"> <div class="ebox">
+  (4)document.querySelector(".pbox").innerHTML
+  A: <div class="ebox">
+  (5)document.querySelector(".ebox").innerHTML
+  A:'This is an example box
+  (6)document.querySelector(".container").innerText
+  A: 'Hey , I am Box'
+  (7)document.querySelector(".container2").innerText
+  A:'This is an example box
+  (8)document.querySelector(".container").outerHTML
+  A:'<div class="container">\n        <div class="box">Hey , I am Box</div>\n    </div>'
+  
+  Difference b/w innerHTML and outerHTML : 
+  innerHTML gets or sets the HTML content inside an element, while outerHTML includes the element itself along with its HTML content.
+  
+  (9)document.querySelector(".container").tagName
+  A:'DIV'
+  (10)document.querySelector(".container").NodeName
+  A:'DIV'
+  
+  difference b/w tagName and NodeName
+  TagName only exists for element nodes
+  where NodeName exists for any node(text,comment etc)
+  
+  textcontent -> provides access to the text inside the element : only text,minus all tags
+  (11)document.querySelector(".container").textContent
+  A:'\n        Hey , I am Box\n    ' 
+  
+  The hidden property -> the "hidden" property and the DOM property specifies whether the element is visible or not
+  (12)document.querySelector(".container").hidden
+  A: false
+  (12)document.querySelector(".container").hidden=true
+  A: true
+  Now content of container tag is not visible in webpage.basically it adds hidden attribute as inline in div tag
+  
+   now how to change content using innerHTML
+   (13)document.querySelector(".container").innerHTML="hey , i am content" 
+   then it change first text of container which is "Hey , I am box" to "hey , i am content"
+   
+    Attribute methods:
+    (1)elem.hasAttribute(name) -> Method to check for existence of an attribute
+    (2)elem.getAttribute(name) -> Method to get value of an attribute
+    (3)elem.setAttribute(name,value) -> Method to set the value of an attribute
+    (4)elem.removeAttribute(name) -> Method to remove attribute from elem.
+    (5)elem.Attributes -> Method to get the collection of all attributes
+    
+    ex:
+    (1)document.querySelector(".container").hasAttribute("style")
+    A: false
+    (2)document.querySelector(".container").getAttribute("style")
+    A: null
+    (3)document.querySelector(".container").setAttribute("style","display:inline")
+    A: null
+    (4)document.querySelector(".container").removeAttribute("style")
+    A: undefined
+    document.querySelector(".container").attributes
+    A:NamedNodeMap {0: class, class: class, length: 1}
+
+    document.querySelector(".container").setAttribute("style","display:inline")
+    A: undefined
+    document.querySelector(".container").attributes
+    A: NamedNodeMap {0: class, 1: style, class: class, style: style, length: 2}
+    
+    if i write : document.designMode="on" in console
+    then i can change any website directly manually 
+    
+    data- attributes:
+    we can always create custom attribute but the ones starting with "data-" are reserved for programmers use.They are available in a property named dataset
+    if an element has an attribute named "data -one" it's available as element.dataset.one
+    
+    explanation : 
+    In HTML, custom attributes that start with "data-" are known as data attributes. These attributes are used to store custom data private to the page or application, and they are available to developers through JavaScript in a special property called dataset.
+
+    Custom Data Attributes:
+
+    Any attribute that starts with "data-" is a custom data attribute.
+    These attributes can hold extra information that you can use within your scripts.
+    Accessing Data Attributes in JavaScript:
+
+    The dataset property of an HTML element provides access to all the data attributes.
+    Each data attribute is converted to a property of the dataset object.
+
+    Example:
+    Suppose you have an HTML element with a data attribute:
+
+    <div class="box" data-one="value1" data-two="value2"></div>
+
+    In JavaScript, you can access these attributes using the dataset property:
+    let element = document.querySelector(".box");
+    console.log(element.dataset.one); // Outputs: value1
+    console.log(element.dataset.two); // Outputs: value2
+    -->
