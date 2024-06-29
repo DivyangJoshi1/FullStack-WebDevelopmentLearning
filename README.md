@@ -81,3 +81,4 @@ This repository is a collection of notes and code examples to help you learn and
 ## FrontEnd Development
 ### ReactJs
 - [LEC : 01 Creating our first react app using create-react-app and Folder Structure]
+- [LEC : 02 JavaScript Refresher]
