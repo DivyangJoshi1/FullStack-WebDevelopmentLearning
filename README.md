@@ -85,3 +85,4 @@ This repository is a collection of notes and code examples to help you learn and
 - [LEC : 03 Understanding Of JSX]
 - [LEC : 04 Understanding Of SPA and Adding bootstarp to React , Concept of Default Export and named export]
 - [LEC : 05 Understanding Props and PropTypes in React]
+- [LEC : 06 Understanding State & Handling Events in React]
