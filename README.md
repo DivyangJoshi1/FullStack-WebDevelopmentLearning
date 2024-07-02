@@ -86,3 +86,5 @@ This repository is a collection of notes and code examples to help you learn and
 - [LEC : 04 Understanding Of SPA and Adding bootstarp to React , Concept of Default Export and named export]
 - [LEC : 05 Understanding Props and PropTypes in React]
 - [LEC : 06 Understanding State & Handling Events in React]
+- [LEC : 07 React Mini Project of TextUtils] 
+- [LEC : 08 Creating "Enable Dark Mode" Button Using useState Hook] 
