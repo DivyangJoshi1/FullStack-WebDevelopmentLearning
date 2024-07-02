@@ -1,0 +1,179 @@
+<!-- Notes: 
+-------------------------------------------------------
+
+
+React Components and Props
+
+Introduction to Components:
+
+->Components: Building blocks of a React application, allowing you to split the UI into reusable pieces.
+->File Organization: Place custom components in a dedicated components folder for better organization.
+
+Creating a Function-Based Component (RFC):
+->RFCs are the most common and straightforward way to write components in React.
+->Naming Convention: Always start component names with a capital letter (e.g., Navbar.js).
+->Function Component: Create a component using the rfc snippet.
+
+----------------------------|
+Code:                       |
+import React from 'react';  |
+                            |
+const Navbar = () => {      |
+  return (                  |
+    <div>                   |
+      Hello, I am a Navbar  |
+    </div>                  |
+  );                        |
+}                           |
+-----------------------------
+
+export default Navbar;
+
+now , Using Components: Import and use components in App.js
+
+Code:
+import Navbar from './components/Navbar';
+
+function App() {
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+  );
+}
+
+export default App;
+Purpose of Components: Keep the codebase clean and organized by separating different parts of the UI into individual components.
+
+---
+Using Props in Components :
+->Props: Short for properties, used to pass data from parent to child components.
+->Passing Props: Pass props to a component like attributes in HTML
+
+Code:
+<Navbar title="TextUtils" />
+
+Accessing Props: Receive and use props within the component.
+
+Code:
+const Navbar = (props) => {
+  return (
+    <nav>
+      <h1>{props.title}</h1>
+    </nav>
+  );
+}
+export default Navbar;
+
+
+Example with Multiple Props
+Passing Multiple Props: Pass multiple pieces of data as props.
+
+Code:
+<Navbar title="TextUtils" aboutText="About TextUtils" />
+
+Using Multiple Props: Access and use multiple props in the component.
+
+Code:
+const Navbar = (props) => {
+  return (
+    <nav>
+      <h1>{props.title}</h1>
+      <p>{props.aboutText}</p>
+    </nav>
+  );
+}
+
+export default Navbar;
+
+Understanding Props:
+->Purpose of Props: Allow components to be dynamic and reusable by passing different data.
+->Analogy: A blank paper (component) becomes useful (application) when filled with specific information (props).
+->Imp note: props are read only
+
+
+-------------------------------
+PropTypes in React:
+->Purpose: PropTypes help catch bugs by validating the types of props passed to a component.
+->Installation: Ensure PropTypes is installed.
+
+Code:
+npm install prop-types
+
+
+Importing PropTypes: Import PropTypes at the beginning of your component file.
+
+Code:
+import PropTypes from 'prop-types';
+
+Defining PropTypes
+->Setting PropTypes: Define PropTypes for your component to specify the expected type of each prop.
+
+Code:
+Navbar.propTypes = {
+  title: PropTypes.string,
+  aboutText: PropTypes.string
+};
+
+Example with Multiple Props:
+Passing Multiple Props: Pass multiple pieces of data as props
+
+Code:
+<Navbar title="TextUtils" aboutText="About TextUtils" />
+
+Using Multiple Props: Access and use multiple props in the component
+
+Code:
+const Navbar = (props) => {
+  return (
+    <nav>
+      <h1>{props.title}</h1>
+      <p>{props.aboutText}</p>
+    </nav>
+  );
+}
+
+export default Navbar;
+
+Concept of : Handling Invalid Props
+
+Invalid Prop Warning: If a prop of the wrong type is passed, React will log a warning.
+
+Example code:
+<Navbar title={3} /> // Warning: Failed prop type
+
+Concept of Default Props:
+Setting Default Props: Provide default values for props if none are passed
+
+Example code:
+Navbar.defaultProps = {
+  title: "Set Title Here",
+  aboutText: "About Text Here"
+};
+
+Usage: If props are not provided, default values will be used
+
+Code:
+<Navbar /> // Uses defaultProps
+
+Concept of PropTypes with isRequired:
+Marking Props as Required: Ensure that certain props are always passed to the component
+
+Code:
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  aboutText: PropTypes.string
+};
+
+Handling Missing Required Props: If a required prop is not provided, React will log a warning
+
+code:
+<Navbar /> // Warning: Failed prop type
+
+Summary
+Props: Pass data to components to make them dynamic.
+PropTypes: Validate the types of props to catch bugs and ensure correct usage.
+DefaultProps: Provide default values for props when none are passed.
+isRequired: Ensure essential props are always provided, preventing potential errors.
+
+-->
